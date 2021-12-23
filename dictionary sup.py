@@ -4,7 +4,6 @@ from pprint import pprint
 
 def dict_factory(cursor, row):
     # обертка для преобразования
-    # полученной строки. (взята из документации)
     d = {}
     for idx, col in enumerate(cursor.description):
         d[col[0]] = row[idx]
