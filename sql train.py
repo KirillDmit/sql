@@ -15,6 +15,11 @@ cur.execute('CREATE TABLE works('
             'otherInfo TEXT'
             )
 
+cur.execute(
+'INSERT INTO works (id, salary, educationType, jobTitle, qualification, gender, dateModify, skills, otherInfo)'
+'VALUES (1, 1000, "Высшее", "Специалист", "Магистр", "Мужской", "2021-04-01", "Аналитическое", "мышление") '
+)
+
 res = con.execute('SELECT COUNT(*) FROM works')
 list(res)
 res = con.execute('select * from works limit 3')
